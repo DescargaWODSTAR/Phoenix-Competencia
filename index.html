@@ -107,12 +107,12 @@
   </style>
 </head>
 <body>
-  <h1>WodStarScores</h1>
+  <h1>Wod Star Sccoress</h1>
   <select id="competenciaSelect">
-    <option value="">Selecciona categoria</option>
-    <option value="equipos_hh">Hombre Hombre</option>
-    <option value="equipos_hm">Hombre Mujer</option>
-    <option value="equipos_mm">Mujer Mujer</option>
+    <option value="">Selecciona una categoria</option>
+    <option value="equipos_hh">Equipos Hombre Hombre</option>
+    <option value="equipos_hm">Equipos Hombre Mujer</option>
+    <option value="equipos_mm">Equipos Mujer Mujer</option>
   </select>
   <button onclick="mostrarCompetencia()">Ingresar</button>
 
@@ -123,49 +123,468 @@
     const datos = {
       pruebaEquipos: {
         principiantes: [
-          {
-            equipo: "Titanes | Hombre Hombre",
-            atletas: ["Luis", "Carlos"],
+          { 
+            
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
             resultados: [
-              { descripcion: "WOD 1", valor: "120 reps", puntos: 200  },
-              { descripcion: "WOD 2", valor: "100 reps", puntos: 75 },
-              { descripcion: "WOD 3", valor: "130 reps", puntos: 85 },
-              { descripcion: "Final", valor: "100 kg / 220 lb", puntos: 90 }
+              { descripcion: "WOD 1", valor: "0 reps", puntos:0},
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
             ]
           },
-           {
-            equipo: "Zorrass | Hombre Hombre",
-            atletas: ["Luis", "Carlos"],
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
             resultados: [
-              { descripcion: "WOD 1", valor: "120 reps", puntos: 200  },
-              { descripcion: "WOD 2", valor: "100 reps", puntos: 75 },
-              { descripcion: "WOD 3", valor: "130 reps", puntos: 85 },
-              { descripcion: "Final", valor: "100 kg / 220 lb", puntos: 90 }
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos:0 }
+            ]
+          },
+        
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0},
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          }, 
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0},
+              { descripcion: "Final", valor: "0", puntos: 0 }
             ]
           },
           {
-            equipo: "FuerzaMixta | Hombre Mujer",
-            atletas: ["Pedro", "Ana"],
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
             resultados: [
-              { descripcion: "WOD 1", valor: "110 reps", puntos: 70 },
-              { descripcion: "WOD 2", valor: "105 reps", puntos: 80 },
-              { descripcion: "WOD 3", valor: "120 reps", puntos: 75 },
-              { descripcion: "Final", valor: "90 kg / 198 lb", puntos: 85 }
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
             ]
           },
           {
-            equipo: "Guerreras | Mujer Mujer",
-            atletas: ["Ana", "Laura"],
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
             resultados: [
-              { descripcion: "WOD 1", valor: "100 reps", puntos: 65 },
-              { descripcion: "WOD 2", valor: "95 reps", puntos: 60 },
-              { descripcion: "WOD 3", valor: "110 reps", puntos: 70 },
-              { descripcion: "Final", valor: "80 kg / 176 lb", puntos: 75 }
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
             ]
-          }
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0},
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps ", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+             { descripcion: "FINAL", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos:0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
         ],
-        intermedios: [],
-        avanzados: []
+        intermedios: [
+            
+           { 
+            
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos:0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos:0 }
+            ]
+          },
+        
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0},
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          }, 
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0},
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0},
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps ", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+             { descripcion: "FINAL", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos:0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+        ],
+        avanzados: [
+              { 
+            
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos:0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos:0 }
+            ]
+          },
+        
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0},
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          }, 
+             {
+            equipo: "NAME | Hombre Hombre",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0  },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0},
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0},
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NAME | Hombre Mujer",
+            atletas: ["NAME", "NAME"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps ", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+             { descripcion: "FINAL", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos:0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+          {
+            equipo: "NOMBRE | Mujer Mujer",
+            atletas: ["NOMBRE", "NOMBRE"],
+            resultados: [
+              { descripcion: "WOD 1", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 2", valor: "0 reps", puntos: 0 },
+              { descripcion: "WOD 3", valor: "0 reps", puntos: 0 },
+              { descripcion: "Final", valor: "0 reps", puntos: 0 }
+            ]
+          },
+        ]
       }
     };
 
