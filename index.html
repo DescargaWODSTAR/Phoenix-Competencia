@@ -287,6 +287,39 @@
           navigator.serviceWorker.register('sw.js');
         });
       }
+      if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(registration => {
+    registration.addEventListener('updatefound', () => {
+      const newWorker = registration.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          // Nuevo SW instalado
+          showUpdateNotification();
+        }
+      });
+    });
+  });
+}
+
+function showUpdateNotification() {
+  let updateDiv = document.createElement('div');
+  updateDiv.style.position = 'fixed';
+  updateDiv.style.bottom = '20px';
+  updateDiv.style.left = '50%';
+  updateDiv.style.transform = 'translateX(-50%)';
+  updateDiv.style.background = '#38bdf8';
+  updateDiv.style.color = '#0f172a';
+  updateDiv.style.padding = '1rem 2rem';
+  updateDiv.style.borderRadius = '1rem';
+  updateDiv.style.cursor = 'pointer';
+  updateDiv.style.zIndex = '1200';
+  updateDiv.textContent = '📢 Hay una nueva versión, toca para actualizar';
+  updateDiv.onclick = () => {
+    window.location.reload(true);
+  };
+  document.body.appendChild(updateDiv);
+}
+
     </script>
     <button id="refreshBtn" title="Refrescar página">🔄</button>
 
