@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WODStar Fitness</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="logo/icon-192.png" />
+  <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      document.getElementById('installBtn').style.display = 'block';
+    });
+
+    function showTutorial() {
+      alert("Para anclar esta app a tu pantalla de inicio:
+
+📱 En Android:
+1. Presiona el botón de menú (⋮).
+2. Toca 'Agregar a pantalla de inicio'.
+
+🍏 En iOS:
+1. Presiona el botón de compartir.
+2. Selecciona 'Agregar a pantalla de inicio'.");
+    }
+
+    function installApp() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('App instalada');
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+  </script>
+</head>
+<body style="text-align:center; font-family:sans-serif; background-color:#111; color:white;">
+  <img src="logo/WODSTAR.png" alt="WODStar Logo" style="width:200px; margin-top:40px;" />
+  <h1>Bienvenido a WODStar</h1>
+  <p>Tu sistema de gestión para gimnasios de CrossFit</p>
+  <button id="installBtn" onclick="installApp()" style="display:none; padding:10px 20px; margin:20px;">📲 Instalar App</button>
+  <button onclick="showTutorial()" style="padding:10px 20px;">❓ Cómo anclar a inicio</button>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function(reg) {
+        console.log("Service Worker registrado.", reg);
+      });
+    }
+  </script>
+</body>
+</html>
